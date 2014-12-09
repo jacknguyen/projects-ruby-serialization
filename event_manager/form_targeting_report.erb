@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Targeting Report</title>
+</head>
+<body>
+  <h1>Targeting Report</h1>
+  <h2>Registration by the hour: </h2>
+  <table>
+    <tr>
+      <th>Hour</th><th>Registration Count</th>
+    </tr>
+    <% @peak_hours.each do |hour| %>
+      <tr>
+        <td><%= hour[0] %></td>
+        <td><%= hour[1] %></td>
+      </tr>
+    <% end %>
+  </table>
+  <h2>Registration by the weekday: </h2>
+  <table>
+    <tr>
+      <th>Days</th><th>Registration Count</th>
+    </tr>
+    <% @peak_wdays.each do |day| %>
+      <tr>
+        <td><%= day[0] %></td>
+        <td><%= day[1] %></td>
+      </tr>
+    <% end %>
+  </table>
+</body>
+</html>
